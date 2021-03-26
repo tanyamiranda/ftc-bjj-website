@@ -5,7 +5,7 @@
 body {
 	padding: 0px;
 	margin: auto;
-	font-family: "open sans", Arial, Helvetica, sans-serif;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 	background-color: white;
 	color: #484848;
 	line-height: 1.5;
@@ -83,7 +83,6 @@ p + p {
 
 #header-menu-icon a {
 	text-decoration: none;
-	font-family: "open sans", Arial, Helvetica, sans-serif;
 	font-size: 12pt; 
 	font-weight:bold;
 	padding: 20px;
@@ -91,7 +90,6 @@ p + p {
 
 #header-menu-icon a:hover {
 	cursor: pointer;
-	font-family: "open sans", Arial, Helvetica, sans-serif;
 	font-size: 12pt; 
 	font-weight:bold;
 	color: #cc0000;
@@ -225,7 +223,7 @@ Content layout
 }
 
 .section-title {
-	font: 20px Open Sans;
+	font: 20px;
 	color:#bb2921;
 	text-align: center;
 	padding: 20px 10px;
