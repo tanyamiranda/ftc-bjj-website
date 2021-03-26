@@ -5,7 +5,7 @@
 body {
 	padding: 0px;
 	margin: auto;
-	font-family: 'Open Sans';
+	font-family: "open sans", Arial, Helvetica, sans-serif;
 	background-color: white;
 	color: #484848;
 	line-height: 1.5;
@@ -83,7 +83,7 @@ p + p {
 
 #header-menu-icon a {
 	text-decoration: none;
-	font-family: 'open sans';
+	font-family: "open sans", Arial, Helvetica, sans-serif;
 	font-size: 12pt; 
 	font-weight:bold;
 	padding: 20px;
@@ -91,7 +91,7 @@ p + p {
 
 #header-menu-icon a:hover {
 	cursor: pointer;
-	font-family: 'open sans';
+	font-family: "open sans", Arial, Helvetica, sans-serif;
 	font-size: 12pt; 
 	font-weight:bold;
 	color: #cc0000;
