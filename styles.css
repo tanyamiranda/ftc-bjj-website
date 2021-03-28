@@ -2,10 +2,13 @@
   --max-site-width: 1280px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 body {
 	padding: 0px;
 	margin: auto;
-	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12pt;
 	background-color: white;
 	color: #484848;
 	line-height: 1.5;
@@ -44,17 +47,15 @@ p + p {
 	background: white;
     z-index: 100;
     border-bottom: 1px solid #e5e5e5;
+    position: fixed;
+  	top: 0;
+  	width: 100%;
 }
 
 #header-sm-icons{
 	display: none;
 }
 
-.sticky {
-  	position: fixed;
-  	top: 0;
-  	width: 100%;
-}
 
 #header-image {
 	z-index: 8;
@@ -106,7 +107,7 @@ p + p {
 	display: inline-block;
 	color: #464646;
 	text-decoration: none;
-	font-size: 11pt; 
+	font-size: 10pt; 
 	text-transform: uppercase;
 	padding: 10px;
 }
@@ -175,7 +176,7 @@ menu hidden.
 	}
 
 	.menu-item {
-		font-size: 14pt;
+		font-size: 12pt;
 		width: 150px;
 		display:block;
 		color: silver;
@@ -215,24 +216,41 @@ Content layout
 */
 
 #content {
-	padding-top: 80px;
+	padding-top: 92px;
 }
 
 .section {
-	padding: 20px;
+	padding: 0px;
+	padding-bottom: 20px;
+}
+
+.sub-section-white {
+	background-color: white;
+}
+
+.sub-section-gray {
+	background-color: #EEF2F7;
 }
 
 .section-title {
-	font: 20px;
+	font-size: 16pt;
 	color:#bb2921;
 	text-align: center;
-	padding: 20px 10px;
+	padding: 25px;
+	text-transform: uppercase;
 }
 
 .section-text {
 	padding: 10px;
 	width: 90%;
 	max-width: 800px; 
+	margin: auto;
+}
+
+.section-text-narrow {
+	padding: 10px;
+	width: 90%;
+	max-width: 700px; 
 	margin: auto;
 }
 
@@ -263,25 +281,28 @@ Content layout
 	.img-float-left, .img-float-right {
 		float: none;
 	    clear: all;
-	    margin: 0;
+	    margin-left: 0;
+	    margin-right: 0;
 	    width: 100%;
 	    text-align: center;
-	    padding: 25px 0;
 	}
 
 }
 
 .class-offering {
 	text-align: left;
-	width: 100%;
-    max-width: 200px;
-    padding: 20px;
+    width: 100%;
+    max-width: 290px;
+    padding: 0px 15px 15px 15px;
     font-size: 11pt;
-    box-shadow: 0 5px 10px -3px grey;
-    height: 200px;
-    margin: 10px;
-    background: white;
-    border-radius: 15px;
+    margin: 10px 0px;
+
+	/* TO MAKE INTO FLOATING CARDS */
+	/* max-width: 200px; */
+	/* box-shadow: 0 5px 10px -1px grey; */
+	/* height: 200px; */
+    /* background: white; */
+    /* border-radius: 15px; */
 }
 
 .class-name {
@@ -293,10 +314,12 @@ Content layout
     margin-bottom: 10px;
     padding-bottom: 10px;
     font-weight: bold;
+    font-size: 10pt;
 }
 
 .class-detail {
 	width: 100%;
+	font-size: 11pt;
 }
 
 #footer {
@@ -334,6 +357,10 @@ Schedule iframe
    #schedule-iframe, #schedule-container{
       height: 350px;
      }
+
+	#schedule-section {
+		padding:0;
+	}
  }
 
 
@@ -345,13 +372,8 @@ of the content would be blocked.
 .hidden-anchor {
 	display: block;
     position: relative;
-    top: -80px;
-    visibility: hidden;
-}
-
-#schedule-section {
-	padding:0;
-	padding-bottom: 30px;
+    top: -90px;
+    
 }
 
 #mapContainer {
@@ -375,4 +397,39 @@ of the content would be blocked.
     padding: 5px 10px;
     color: white; 
     text-align: center;
+	font-size: 9pt;
+    text-transform: uppercase;
+}
+
+.learn-more-link {
+	color: green;
+    font-style: italic;
+}
+
+#private-lessons-list {
+	display: block;
+    max-width: 750px;
+    margin: auto;
+}
+
+#private-lessons-list ul ::marker {
+	color: #bb2921;
+}
+
+#private-lessons-list ul li {
+	padding: 10px;
+}
+
+
+.image-group {
+	text-align: center;
+	margin: auto;
+	padding: 20px 0px;
+
+}
+
+.image-group img {
+	width: 100%;
+	max-width: 300px;
+	padding: 10px;
 }

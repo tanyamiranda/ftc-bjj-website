@@ -23,56 +23,32 @@ function hideMenu() {
 
 function displaySection(section) {
 
-	var welcome = document.getElementById("welcome-section");
-	var slideshow = document.getElementById("header-slideshow");
-	var classes = document.getElementById("classes-section");
-	var academy = document.getElementById("about-the-academy-section");
-	var professor = document.getElementById("about-professor-section");
-	var contact = document.getElementById("contact-us-section");
-	var schedule = document.getElementById("schedule-section");
+	const HOMEPAGETAG="welcome-to-ftc-section";
+	const ALLTAGS=["welcome-to-ftc","our-classes", "class-schedule", "contact-us", "private-classes", "about-the-academy", "professor-marcelo-oliveira","bjj-kids-teens"];
+	let sectionTag = "";
 
+	if (section==='' || ALLTAGS.indexOf(section)===-1)
+		sectionTag= HOMEPAGETAG;
+	else 
+		sectionTag = section + "-section";
 
-	switch(section) {
-		case "academy": 
-			welcome.style.display = 'none';
-			slideshow.style.display= 'none';
-			classes.style.display = 'none';
-			academy.style.display = 'block';
-			professor.style.display = 'block';
-			contact.style.display = 'none';
-			schedule.style.display = 'none';
-			break;
-		
-		case "contact":
-			welcome.style.display = 'none';
-			slideshow.style.display= 'none';
-			classes.style.display = 'none';
-			academy.style.display = 'none';
-			professor.style.display = 'none';
-			contact.style.display = 'block';
-			schedule.style.display = 'none';
-			break;
+	/* Display slideshow only on home page */
+	let slideshow = document.getElementById("slideshow-container");
+	if (sectionTag===HOMEPAGETAG)	
+		slideshow.style.display= "block";
+	else
+		slideshow.style.display= "none"
 
-		case "schedule":
-			welcome.style.display = 'none';
-			slideshow.style.display= 'none';
-			classes.style.display = 'none';
-			academy.style.display = 'none';
-			professor.style.display = 'none';
-			contact.style.display = 'none';
-			schedule.style.display = 'block';
-			break;
-		
-		default:
-	    	welcome.style.display = 'block';
-			slideshow.style.display = "block";
-			classes.style.display = 'block';
-			academy.style.display = 'none';
-			professor.style.display = 'none';
-			contact.style.display = 'none';
-			schedule.style.display = 'none';
-	    	break;
-	} 
+	let allSections = document.getElementsByClassName("section")
+
+	for (i = 0; i < allSections.length; i++) { 
+		let section = allSections[i]
+		if (section.id === sectionTag)
+			section.style.display='block';
+		else 		
+			section.style.display='none';
+	}
+	
 }
 
 /******************************
@@ -106,4 +82,11 @@ window.onresize = function(event) {
 	}
 
 };
+
+/******************************
+In case the sections are linked
+externally, pre-load section
+******************************/
+const section = window.location.hash;
+displaySection(section.substring(1));
 
