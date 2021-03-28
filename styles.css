@@ -2,12 +2,10 @@
   --max-site-width: 1280px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
 body {
 	padding: 0px;
 	margin: auto;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 12pt;
 	background-color: white;
 	color: #484848;
@@ -216,7 +214,7 @@ Content layout
 */
 
 #content {
-	padding-top: 92px;
+	padding-top: 91px;
 }
 
 .section {
@@ -237,6 +235,13 @@ Content layout
 	color:#bb2921;
 	text-align: center;
 	padding: 25px;
+	text-transform: uppercase;
+}
+
+.section-subtitle{
+	text-align: center;
+	padding: 10px 0px;
+	color:#bb2921;
 	text-transform: uppercase;
 }
 
@@ -292,9 +297,8 @@ Content layout
 .class-offering {
 	text-align: left;
     width: 100%;
-    max-width: 290px;
+    max-width: 300px;
     padding: 0px 15px 15px 15px;
-    font-size: 11pt;
     margin: 10px 0px;
 
 	/* TO MAKE INTO FLOATING CARDS */
@@ -314,7 +318,7 @@ Content layout
     margin-bottom: 10px;
     padding-bottom: 10px;
     font-weight: bold;
-    font-size: 10pt;
+    font-size: 11pt;
 }
 
 .class-detail {
@@ -405,6 +409,10 @@ of the content would be blocked.
 	color: green;
     font-style: italic;
 }
+.learn-more-link:hover {
+	color: green;
+}
+
 
 #private-lessons-list {
 	display: block;
