@@ -259,6 +259,13 @@ Content layout
 	margin: auto;
 }
 
+.section-text-wide {
+	padding: 0px;
+	width: 100%;
+	max-width: 900px; 
+	margin: auto;
+}
+
 .section-text-block {
 	display: inline-block;
 	margin: auto;
@@ -297,7 +304,7 @@ Content layout
 .class-offering {
 	text-align: left;
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
     padding: 0px 15px 15px 15px;
     margin: 10px 0px;
 
@@ -307,6 +314,14 @@ Content layout
 	/* height: 200px; */
     /* background: white; */
     /* border-radius: 15px; */
+}
+
+@media screen and (max-width: 400px) {
+	.class-offering {
+		max-width: 350px;
+		padding: 15px 0px;
+		margin: 0;
+	}
 }
 
 .class-name {
@@ -408,7 +423,11 @@ of the content would be blocked.
 .learn-more-link {
 	color: green;
     font-style: italic;
+	padding-top: 10px;
+	font-size: small;
+    font-weight: bold;
 }
+
 .learn-more-link:hover {
 	color: green;
 }
