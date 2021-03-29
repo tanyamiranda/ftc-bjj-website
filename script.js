@@ -48,7 +48,6 @@ function displaySection(section) {
 		else 		
 			section.style.display='none';
 	}
-
 }
 
 /******************************

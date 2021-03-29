@@ -452,8 +452,9 @@ of the content would be blocked.
 
 #private-lessons-list {
 	display: block;
-    max-width: 750px;
+    max-width: 600px;
     margin: auto;
+	padding: 0px 10px;
 }
 
 #private-lessons-list ul ::marker {
