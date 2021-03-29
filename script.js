@@ -48,6 +48,10 @@ function displaySection(section) {
 		else 		
 			section.style.display='none';
 	}
+
+	if (CLASSESSUBTAGS.indexOf(section)=== -1)
+		window.scrollTo(0,0);
+
 }
 
 /******************************
