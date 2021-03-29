@@ -21,7 +21,7 @@ function hideMenu() {
     
 }
 
-function displaySection(section) {
+function displaySection(sectionName) {
 
 	const HOMEPAGETAG="welcome-to-ftc-section";
 	const ALLTAGS=["welcome-to-ftc","our-classes", "class-schedule", "contact-us", "about-the-academy", "professor-marcelo-oliveira","private-classes","bjj-kids-teens"];
@@ -29,13 +29,13 @@ function displaySection(section) {
 	
 	let sectionTag = "";
 	
-	if (section==='' || ALLTAGS.indexOf(section)===-1)
+	if (sectionName==='' || ALLTAGS.indexOf(sectionName)===-1)
 		sectionTag= HOMEPAGETAG;
 	else {
-		if (CLASSESSUBTAGS.indexOf(section)!= -1)
+		if (CLASSESSUBTAGS.indexOf(sectionName)!= -1)
 			sectionTag = "our-classes-section";
 		else 
-			sectionTag = section + "-section";
+			sectionTag = sectionName + "-section";
 		
 	}
 
@@ -49,8 +49,11 @@ function displaySection(section) {
 			section.style.display='none';
 	}
 
-	if (CLASSESSUBTAGS.indexOf(section)=== -1)
-		window.scrollTo(0,0);
+	//Scroll to top if not subtags
+	if (CLASSESSUBTAGS.indexOf(sectionName)=== -1) {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
 
 }
 
