@@ -24,31 +24,31 @@ function hideMenu() {
 function displaySection(section) {
 
 	const HOMEPAGETAG="welcome-to-ftc-section";
-	const ALLTAGS=["welcome-to-ftc","our-classes", "class-schedule", "contact-us", "private-classes", "about-the-academy", "professor-marcelo-oliveira","bjj-kids-teens"];
+	const ALLTAGS=["welcome-to-ftc","our-classes", "class-schedule", "contact-us", "about-the-academy", "professor-marcelo-oliveira","private-classes","bjj-kids-teens"];
+	const CLASSESSUBTAGS = ["private-classes","bjj-kids-teens"];
+	
 	let sectionTag = "";
-
+	
 	if (section==='' || ALLTAGS.indexOf(section)===-1)
 		sectionTag= HOMEPAGETAG;
-	else 
-		sectionTag = section + "-section";
-
-	/* Display slideshow only on home page */
-	let slideshow = document.getElementById("slideshow-container");
-	if (sectionTag===HOMEPAGETAG)	
-		slideshow.style.display= "block";
-	else
-		slideshow.style.display= "none"
+	else {
+		if (CLASSESSUBTAGS.indexOf(section)!= -1)
+			sectionTag = "our-classes-section";
+		else 
+			sectionTag = section + "-section";
+		
+	}
 
 	let allSections = document.getElementsByClassName("section")
 
 	for (i = 0; i < allSections.length; i++) { 
-		let section = allSections[i]
+		var section = allSections[i]
 		if (section.id === sectionTag)
 			section.style.display='block';
 		else 		
 			section.style.display='none';
 	}
-	
+
 }
 
 /******************************
@@ -87,8 +87,10 @@ window.onresize = function(event) {
 In case the sections are linked
 externally, pre-load section
 ******************************/
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const page = urlParams.get('page');
-displaySection(page);
+const hash = window.location.hash;
+displaySection(hash.substr(1));
 
+window.onpopstate = function() {
+	const hash = window.location.hash;
+	displaySection(hash.substr(1));
+}
