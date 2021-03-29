@@ -87,6 +87,8 @@ window.onresize = function(event) {
 In case the sections are linked
 externally, pre-load section
 ******************************/
-const section = window.location.hash;
-displaySection(section.substring(1));
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const page = urlParams.get('page');
+displaySection(page);
 

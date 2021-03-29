@@ -20,6 +20,7 @@ a {
 a:hover {
 	text-decoration: none;
 	color: inherit;
+	cursor: pointer;
 }
 
 
@@ -224,10 +225,12 @@ Content layout
 
 .sub-section-white {
 	background-color: white;
+	max-width: 100%;
 }
 
 .sub-section-gray {
 	background-color: #EEF2F7;
+	max-width: 100%;
 }
 
 .section-title {
@@ -285,7 +288,7 @@ Content layout
 	margin-bottom: 10px;
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 700px) {
 	.section-text-block {
 		width: 100%;
 	}
@@ -400,11 +403,11 @@ of the content would be blocked.
     margin: auto;
 }
 
-#classes-section, #about-professor-section {
+#private-classes {
 	background-color: #EEF2F7;
 }
 
-#contact-us-section, #schedule-section, #about-professor-section, #about-the-academy-section {
+.section {
 	display: none;
 }
 
@@ -459,4 +462,46 @@ of the content would be blocked.
 	width: 100%;
 	max-width: 300px;
 	padding: 10px;
+}
+
+/***********************************************
+This is so the footer prints with inverted colors.
+***********************************************/
+@media print
+{    
+	#footer {
+		display: block;
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		background-color: white;
+		color: #484848;;
+		padding-top: 10px;
+		padding-bottom: 2px;
+		font-size: 12px;
+		line-height: 1;
+		border-top: 0.5px solid silver;
+	}
+
+	.img-float-left {
+		float: left;
+		margin-right: 25px;
+		margin-bottom: 10px;
+	}
+	
+	.img-float-right {
+		float: right;
+		margin-left: 25px;
+		margin-bottom: 10px;
+	}
+
+	.pageBreakSection {
+		page-break-before: always;
+		padding-top: 90px;
+		background-color: white;
+	}
+
+	.no-print {
+		display:none;
+	}
 }
